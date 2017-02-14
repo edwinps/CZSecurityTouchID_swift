@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5qx-8W-NgF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="EyL-Uf-ffd">
+            <objects>
+                <navigationController id="5qx-8W-NgF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="66Y-2M-oVb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cuZ-LJ-Pk5" kind="relationship" relationship="rootViewController" id="KCk-0O-hYh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tfh-lO-wK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="157"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="te2-2X-QTi">
+            <objects>
+                <viewController id="cuZ-LJ-Pk5" customClass="ViewController" customModule="CZSecurityTouchIDSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s0n-YE-3XA"/>
+                        <viewControllerLayoutGuide type="bottom" id="3dK-v1-D61"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eae-Pd-omB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-LE-5A9">
+                                <rect key="frame" x="157" y="289" width="62" height="30"/>
+                                <state key="normal" title="Enter Pin"/>
+                                <connections>
+                                    <action selector="showPinAction:" destination="cuZ-LJ-Pk5" eventType="touchUpInside" id="rED-Mu-sjQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-Ot-bch">
+                                <rect key="frame" x="159" y="344" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="SettingPinAction:" destination="cuZ-LJ-Pk5" eventType="touchUpInside" id="3fP-Tj-bP8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0cD-Ot-bch" firstAttribute="centerX" secondItem="eae-Pd-omB" secondAttribute="centerX" id="4q9-aK-4lJ"/>
+                            <constraint firstItem="0cD-Ot-bch" firstAttribute="top" secondItem="W7c-LE-5A9" secondAttribute="bottom" constant="25" id="BKG-UY-zqf"/>
+                            <constraint firstItem="W7c-LE-5A9" firstAttribute="centerY" secondItem="eae-Pd-omB" secondAttribute="centerY" constant="-30" id="gu8-nf-R3E"/>
+                            <constraint firstItem="W7c-LE-5A9" firstAttribute="centerX" secondItem="eae-Pd-omB" secondAttribute="centerX" id="jrQ-GQ-QlB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GcR-QK-1Cm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQ5-l0-AeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.79999999999995" y="156.97151424287858"/>
+        </scene>
+    </scenes>
+</document>
